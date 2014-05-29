@@ -39,7 +39,6 @@ def get_many_args(rows):
         many_args.append(args)
     return many_args
 
-
 def get_db_conn(args):
     target_db = args.targetdb
     db_user = args.dbuser
@@ -49,7 +48,6 @@ def get_db_conn(args):
                               unix_socket="/tmp/mysql.sock", charset='utf8')
     cursor = db_conn.cursor()
     return cursor
-
 
 def update_db(db_conn, target_table, field_name, many_args):
     query = ('UPDATE ' + target_table + ' SET ' + 
