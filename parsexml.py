@@ -74,6 +74,16 @@ if __name__ == "__main__":
     main()
 
 
-def test_rows():
-    args = parse_args()
-    xml = get_xml(args)
+def test_xml_file():
+    xml = get_xml('test.xml')
+
+
+def test_xml_rows():
+    xml_data = """
+    <row>Testing</row>
+    <row>Text</row>
+    <row>For</row>
+    <row>Testicles</row>
+    """
+    rows = get_rows(xml_data)
+    assert rows == 4
