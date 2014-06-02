@@ -11,6 +11,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 		<field name="text_test">Test Text For Testing Testicles</field>
 	</row>
 
+	<row>
+                <field name="id">78</field>
+                <field name="text_test">Another Row For Testing</field>
+        </row>
+
 
 	
 </resultset>

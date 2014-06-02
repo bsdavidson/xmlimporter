@@ -79,11 +79,7 @@ def test_xml_file():
 
 
 def test_xml_rows():
-    xml_data = """
-    <row>Testing</row>
-    <row>Text</row>
-    <row>For</row>
-    <row>Testicles</row>
-    """
+    xml_data = get_xml('test.xml')
     rows = get_rows(xml_data)
-    assert rows == 4
+    assert len(rows) == 2
+    
