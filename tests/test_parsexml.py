@@ -18,7 +18,6 @@ def get_field_name(rows):
     return field_name
 
 
-
 def test_get_fieldnames():
     xml_data = get_xml('test.xml')
     rows = get_rows(xml_data)
@@ -32,3 +31,4 @@ def test_get_args():
     args = get_many_args(rows)
     assert len(args) == 2
 
+    
