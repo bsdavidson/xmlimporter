@@ -1,3 +1,6 @@
+from parsexml import get_rows, get_xml
+
+
 def test_xml_file():
     xml = get_xml('test.xml')
 
