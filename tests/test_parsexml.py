@@ -1,4 +1,5 @@
-from parsexml import get_rows, get_xml, get_many_args
+from xml.dom import minidom
+from parsexml import get_rows, get_xml, get_many_args, get_field_name
 
 
 def test_xml_file():
@@ -9,16 +10,10 @@ def test_xml_rows():
     xml_data = get_xml('test.xml')
     rows = get_rows(xml_data)
     assert len(rows) == 2
+    for row in rows:
+        assert isinstance(row, minidom.Element)
 
-
-def get_field_name(rows):
-    field = rows[0].getElementsByTagName('field')
-    a = field[1].attributes["name"]
-    field_name = a.value
-    return field_name
-
-
-def test_get_fieldnames():
+def test_get_fieldname():
     xml_data = get_xml('test.xml')
     rows = get_rows(xml_data)
     field_name = get_field_name(rows)
@@ -29,6 +24,5 @@ def test_get_args():
     xml_data = get_xml('test.xml')
     rows = get_rows(xml_data)
     args = get_many_args(rows)
-    assert len(args) == 2
-
-    
+    assert args == [['Test Text For Testing', 58],
+                    ['Another Row For Testing', 78]]
