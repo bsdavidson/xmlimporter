@@ -1,2 +1,8 @@
 language: python
-script: py.test
+install:
+- pip install -e .[tests]
+script:
+- tox
+env:
+- TOXENV: py27
+- TOXENV: py34

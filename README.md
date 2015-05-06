@@ -3,4 +3,4 @@ xmlimporter [![Build Status](https://travis-ci.org/bsdavidson/xmlimporter.svg?br
 
 Imports data from an XML file into MySQL.
 
-Used to take translated sql data sent to us as an XML file and import it into a Contao Database. 
+Used to take translated SQL data sent to us as an XML file and import it into a Contao Database.
